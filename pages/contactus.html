@@ -91,7 +91,7 @@
                           <a class="nav-link" href="../index.html">ANA SAYFA</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./magazine.html">MAGAZİN</a>
+                          <a class="nav-link" href="./health.html">SAĞLIK</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="./business.html">İŞ</a>
@@ -100,13 +100,13 @@
                           <a class="nav-link" href="./sports.html">SPOR</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./art.html">SANAT</a>
+                          <a class="nav-link" href="./technology.html">TEKNOLOJİ</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./politics.html">SİYASET</a>
+                          <a class="nav-link" href="./science.html">BİLİM</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./travel.html">SEYAHAT</a>
+                          <a class="nav-link" href="./entertainment.html">MAGAZİN</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="./contactus.html">İLETİŞİM</a>
@@ -143,12 +143,12 @@
           <div class="d-lg-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
               <span class="badge badge-dark mr-3">Flaş haberler</span>
-              <p class="mb-0">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, provident!
+              <p id="news10"class="mb-0">
+                
               </p>
             </div>
             <div class="d-flex">
-              <span class="mr-3 text-danger">Pazartesi, Kasım 14, 2022</span>
+              <span id="tarih"class="mr-3 text-danger"></span>
               <span class="text-danger">9°C,Amasya</span>
             </div>
           </div>
@@ -323,31 +323,31 @@
                   <h3 class="font-weight-bold mb-3">Kategoriler</h3>
                   <div class="footer-border-bottom pb-2">
                     <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Magazin</h5>
+                      <a style=color:white class="mb-0 font-weight-600" href="./entertainment.html">Magazin</a>
                       <div class="count">1</div>
                     </div>
                   </div>
                   <div class="footer-border-bottom pb-2 pt-2">
                     <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">İş</h5>
+                      <a style=color:white class="mb-0 font-weight-600" href="./business.html">İş</a>
                       <div class="count">1</div>
                     </div>
                   </div>
                   <div class="footer-border-bottom pb-2 pt-2">
                     <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Spor</h5>
+                      <a style=color:white class="mb-0 font-weight-600" href="./sports.html">Spor</a>
                       <div class="count">1</div>
                     </div>
                   </div>
                   <div class="footer-border-bottom pb-2 pt-2">
                     <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Sanat</h5>
+                      <a style=color:white class="mb-0 font-weight-600" href="./health.html">Sağlık</a>
                       <div class="count">1</div>
                     </div>
                   </div>
                   <div class="pt-2">
                     <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Siyaset</h5>
+                      <a style=color:white class="mb-0 font-weight-600" href="./technology.html">Teknoloji</a>
                       <div class="count">1</div>
                     </div>
                   </div>
@@ -385,5 +385,33 @@
     <script src="../assets/js/demo.js"></script>
     <script src="../assets/js/jquery.easeScroll.js"></script>
     <!-- End custom js for this page-->
+    <script>
+var url = 'https://newsapi.org/v2/top-headlines?country=tr&apiKey=538580b6dd0f4ddcb9a2f195a94ebf3b'
+
+var req = new Request(url);
+
+var news10 = document.getElementById('news10')
+var news10_image = document.getElementById('news10_image')
+var news10_description = document.getElementById('news10_description')
+
+fetch(req)
+  .then(async response => {
+    const jsonData = await response.json();
+    console.log(jsonData)
+    news10.innerHTML = jsonData.articles[9].title
+    news10_image.src = jsonData.articles[9].urlToImage
+    news10_description.innerHTML = jsonData.articles[9].description
+
+  })
+
+      var tarih = new Date();
+      var yil = tarih.getFullYear();
+      var ay = tarih.getMonth() + 1;
+      var gun = tarih.getDate();
+      var saat = tarih.getHours();
+      var dakika = tarih.getMinutes();
+      var tarih = gun + "/" + ay + "/" + yil + " " + saat + ":" + dakika ;
+      document.getElementById("tarih").innerHTML = tarih;
+    </script>
   </body>
 </html>
