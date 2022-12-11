@@ -477,16 +477,18 @@
                       <div class="footer-border-bottom pb-2">
                         <div class="row">
                           <div class="col-3">
-                            <img
-                              src="../assets/images/dashboard/home_1.jpg"
+                            <img 
+                              id="news14_image"
+                              
                               alt="thumb"
                               class="img-fluid"
                             />
                           </div>
                           <div class="col-9">
-                            <h5 class="font-weight-600">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, incidunt.
+                            <h5 id="news14"class="font-weight-600">
+                              
                             </h5>
+                            
                           </div>
                         </div>
                       </div>
@@ -498,14 +500,14 @@
                         <div class="row">
                           <div class="col-3">
                             <img
-                              src="../assets/images/dashboard/home_2.jpg"
+                              id="news15_image"
                               alt="thumb"
                               class="img-fluid"
                             />
                           </div>
                           <div class="col-9">
-                            <h5 class="font-weight-600">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, incidunt.
+                            <h5 id="news15"class="font-weight-600">
+                              
                             </h5>
                           </div>
                         </div>
@@ -518,14 +520,14 @@
                         <div class="row">
                           <div class="col-3">
                             <img
-                              src="../assets/images/dashboard/home_3.jpg"
+                              id="news16_image"
                               alt="thumb"
                               class="img-fluid"
                             />
                           </div>
                           <div class="col-9">
-                            <h5 class="font-weight-600 mb-3">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, incidunt.
+                            <h5 id="news16"class="font-weight-600 mb-3">
+                              
                             </h5>
                           </div>
                         </div>
@@ -635,6 +637,13 @@ var news12 = document.getElementById('news12')
 var news12_image = document.getElementById('news12_image')
 var news13 = document.getElementById('news13')
 var news13_image = document.getElementById('news13_image')
+var news14 = document.getElementById('news14')
+var news14_image = document.getElementById('news14_image')
+// var news14_url= document.getElementById('news14_url')
+var news15 = document.getElementById('news15')
+var news15_image = document.getElementById('news15_image')
+var news16 = document.getElementById('news16')
+var news16_image = document.getElementById('news16_image')
 
 
 fetch(req)
@@ -672,8 +681,15 @@ fetch(req)
     news12_image.src = jsonData.articles[11].urlToImage
     news13.innerHTML = jsonData.articles[12].title
     news13_image.src = jsonData.articles[12].urlToImage
+    news14.innerHTML = jsonData.articles[13].title
+    news14_image.src = jsonData.articles[13].urlToImage
+    // news14_url.innerHTML=jsonData.articles[13].url
+    news15.innerHTML = jsonData.articles[14].title
+    news15_image.src = jsonData.articles[14].urlToImage
+    news16.innerHTML = jsonData.articles[15].title
+    news16_image.src = jsonData.articles[15].urlToImage
     
-  
+    
 
    })
 

@@ -27,6 +27,7 @@ var url = 'https://newsapi.org/v2/top-headlines?country=tr&apiKey=538580b6dd0f4d
     var news9_image = document.getElementById('news9_image')
     var news9_description = document.getElementById('news9_description')
     
+    
 
 
     
@@ -59,6 +60,7 @@ var url = 'https://newsapi.org/v2/top-headlines?country=tr&apiKey=538580b6dd0f4d
         news9.innerHTML = jsonData.articles[8].title
         news9_image.src = jsonData.articles[8].urlToImage
         news9_description.innerHTML = jsonData.articles[8].description
+        
         
 
       })
