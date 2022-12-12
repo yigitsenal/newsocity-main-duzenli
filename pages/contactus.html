@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Newsocity</title>
+    <title>Newsociety</title>
     <!-- plugin css for this page -->
     <link
       rel="stylesheet"
@@ -149,7 +149,7 @@
             </div>
             <div class="d-flex">
               <span id="tarih"class="mr-3 text-danger"></span>
-              <span class="text-danger">9°C,Amasya</span>
+              <span class="text-danger"></span>
             </div>
           </div>
         </div>
@@ -410,7 +410,7 @@ fetch(req)
       var gun = tarih.getDate();
       var saat = tarih.getHours();
       var dakika = tarih.getMinutes();
-      var tarih = gun + "/" + ay + "/" + yil + " " + saat + ":" + dakika ;
+      var tarih = gun + "." + ay + "." + yil + " " + saat + ":" + dakika ;
       document.getElementById("tarih").innerHTML = tarih;
     </script>
   </body>

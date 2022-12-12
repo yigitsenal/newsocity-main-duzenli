@@ -153,12 +153,12 @@
                   <div class="badge badge-danger fs-12 font-weight-bold mb-3">
                     Güncel Haberler
                   </div>
-                  <h1 id="news2_title" style="color:#007bff"class="mb-0"></h1>
+                  <h1 id="news2_title" style="color:#007bff; font-size:24px;"class="mb-0"></h1>
                   <h1 class="mb-2">
                     
                   </h1>
                   <div class="fs-12">
-                    <span style="color:#007bff; font-size:14px;"id="news2_publish"class="mr-2"> </span>
+                    <span style="color:#007bff; font-size:16px;"id="news2_publish"class="mr-2"> </span>
                   </div>
                 </div>
               </div>
@@ -458,7 +458,7 @@
                             Lorem, ipsum dolor.
                           </h2>
                           <p class="fs-13 mb-1 text-muted">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                           <p class="my-3 fs-15">
                             Lorem Ipsum has been the industry's standard dummy
@@ -473,7 +473,7 @@
                               Sosyal mesafe..
                             </h3>
                             <p class="fs-13 text-muted mb-0">
-                              <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                              <span class="mr-2">  </span> 
                             </p>
                             <p class="mb-0">
                               Lorem Ipsum has been the industry's
@@ -484,7 +484,7 @@
                               Araba satın almak zorlaşıyor..
                             </h3>
                             <p class="fs-13 text-muted mb-0">
-                              <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                              <span class="mr-2">  </span> 
                             </p>
                             <p class="mb-0">
                               Lorem Ipsum has been the industry's
@@ -495,7 +495,7 @@
                               İşletmelere yüzlerce soru..
                             </h3>
                             <p class="fs-13 text-muted mb-0">
-                              <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                              <span class="mr-2">  </span> 
                             </p>
                             <p class="mb-0">
                               Lorem Ipsum has been the industry's
@@ -506,7 +506,7 @@
                               Tesla'nın Kaliforniya fabrikası..
                             </h3>
                             <p class="fs-13 text-muted mb-0">
-                              <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                              <span class="mr-2">  </span> 
                             </p>
                             <p class="mb-0">
                               Lorem Ipsum has been the industry's
@@ -529,7 +529,7 @@
                               Lorem ipsum dolor sit amet.
                             </p>
                             <p class="fs-13 text-muted mb-0">
-                              <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                              <span class="mr-2">  </span> 
                             </p>
                           </div>
                           <div class="pt-3 pb-3">
@@ -540,7 +540,7 @@
                               Lorem ipsum dolor sit amet.
                             </p>
                             <p class="fs-13 text-muted mb-0">
-                              <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                              <span class="mr-2">  </span> 
                             </p>
                           </div>
                         </div>
@@ -563,7 +563,7 @@
                                       Online alışveriş ..
                                     </p>
                                     <p class="fs-13 text-muted mb-0">
-                                      <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                      <span class="mr-2">  </span> 
                                     </p>
                                     <p class="mb-0 fs-13">
                                       Lorem Ipsum has been
@@ -588,7 +588,7 @@
                                       Online alışveriş ..
                                     </p>
                                     <p class="fs-13 text-muted mb-0">
-                                      <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                      <span class="mr-2">  </span> 
                                     </p>
                                     <p class="mb-0 fs-13">
                                       Lorem Ipsum has been
@@ -613,7 +613,7 @@
                                       Online alışveriş ..
                                     </p>
                                     <p class="fs-13 text-muted mb-0">
-                                      <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                      <span class="mr-2">  </span> 
                                     </p>
                                     <p class="mb-0 fs-13">
                                       Lorem Ipsum has been
@@ -638,7 +638,7 @@
                                       Online alışveriş ..
                                     </p>
                                     <p class="fs-13 text-muted mb-0">
-                                      <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                      <span class="mr-2">  </span> 
                                     </p>
                                     <p class="mb-0 fs-13">
                                       Lorem Ipsum has been
@@ -811,7 +811,17 @@
   <script src="./assets/js/jquery.easeScroll.js"></script>
   <script src="./assets/js/api.js"></script>
   <!-- End custom js for this page-->
-
+  
+  <script>
+    var tarih = new Date();
+    var yil = tarih.getFullYear();
+    var ay = tarih.getMonth() + 1;
+    var gun = tarih.getDate();
+    var saat = tarih.getHours();
+    var dakika = tarih.getMinutes();
+    var tarih = gun + "." + ay + "." + yil + " " + saat + ":" + dakika ;
+    document.getElementById("tarih").innerHTML = tarih;
+  </script>
   
 </body>
 

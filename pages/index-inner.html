@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Newsocity</title>
+  <title>Newsociety</title>
   <!-- plugin css for this page -->
   <link rel="stylesheet" href=".././assets/vendors/mdi/css/materialdesignicons.min.css" />
   <link rel="stylesheet" href="../assets/vendors/aos/dist/aos.css/aos.css" />
@@ -135,8 +135,8 @@
               </p>
             </div>
             <div class="d-flex">
-              <span class="mr-3 text-danger">Pazartesi, Kasım 14, 2022</span>
-              <span class="text-danger">9°C,Amasya</span>
+              <span id="tarih" class="mr-3 text-danger"></span>
+              <span class="text-danger"></span>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@
                         Lorem ipsum dolor sit amet consectetur.
                       </h1>
                       <p class="fs-13 text-muted mb-0">
-                        <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                        <span class="mr-2">  </span> 
                       </p>
                       <div class="rotate-img">
                         <img src="../assets/images/inner/inner_1.jpg" alt="banner" class="img-fluid mt-4 mb-4" />
@@ -215,7 +215,7 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                               </h5>
                               <p class="fs-13 text-muted mb-0">
-                                <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                <span class="mr-2">  </span> 
                               </p>
                             </div>
                           </div>
@@ -230,7 +230,7 @@
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                               </h5>
                               <p class="fs-13 text-muted mb-0">
-                                <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                <span class="mr-2">  </span> 
                               </p>
                             </div>
                           </div>
@@ -368,7 +368,7 @@
                                 Ways to stay social online while in self..
                               </h5>
                               <p class="fs-13 text-muted mb-0">
-                                <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                <span class="mr-2">  </span> 
                               </p>
                             </div>
                             <div class="col-sm-4">
@@ -389,7 +389,7 @@
                                 Premier League players join charity..
                               </h5>
                               <p class="fs-13 text-muted mb-0">
-                                <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                <span class="mr-2">  </span> 
                               </p>
                             </div>
                             <div class="col-sm-4">
@@ -410,7 +410,7 @@
                                 UK Athletics board changed stance on..
                               </h5>
                               <p class="fs-13 text-muted mb-0">
-                                <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                <span class="mr-2">  </span> 
                               </p>
                             </div>
                             <div class="col-sm-4">
@@ -434,7 +434,7 @@
                           Lorem ipsum dolor, sit amet consectetur adipisicing.
                         </h3>
                         <p class="fs-13 text-muted mb-0">
-                          <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                          <span class="mr-2">  </span> 
                         </p>
                       </div>
                       <div class="mb-4">
@@ -445,7 +445,7 @@
                           Lorem ipsum dolor, sit amet consectetur adipisicing.
                         </h3>
                         <p class="fs-13 text-muted mb-0">
-                          <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                          <span class="mr-2">  </span> 
                         </p>
                       </div>
                       <div class="mb-4">
@@ -456,7 +456,7 @@
                           Lorem ipsum dolor, sit amet consectetur adipisicing.
                         </h3>
                         <p class="fs-13 text-muted mb-0">
-                          <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                          <span class="mr-2">  </span> 
                         </p>
                       </div>
                     </div>
@@ -619,6 +619,18 @@
   <script src="../assets/js/demo.js"></script>
   <script src="../assets/js/jquery.easeScroll.js"></script>
   <!-- End custom js for this page-->
+
+  <script>
+    var tarih = new Date();
+    var yil = tarih.getFullYear();
+    var ay = tarih.getMonth() + 1;
+    var gun = tarih.getDate();
+    var saat = tarih.getHours();
+    var dakika = tarih.getMinutes();
+    var tarih = gun + "." + ay + "." + yil + " " + saat + ":" + dakika ;
+    document.getElementById("tarih").innerHTML = tarih;
+  </script>
+
 </body>
 
 </html>

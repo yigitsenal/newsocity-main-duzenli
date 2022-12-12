@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Newsocity</title>
+    <title>Newsociety</title>
     <!-- plugin css for this page -->
     <link
       rel="stylesheet"
@@ -150,7 +150,7 @@
               </div>
               <div class="d-flex">
                 <span id="tarih"class="mr-3 text-danger"></span>
-                <span class="text-danger">9°C,Amasya</span>
+                <span class="text-danger"></span>
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@
                             
                           </h2>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                           <p id="news2_description"class="fs-15">
                             
@@ -206,7 +206,7 @@
                             
                           </h2>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                           <p id="news3_description"class="fs-15">
                             
@@ -228,7 +228,7 @@
                             
                           </h2>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                           <p id="news4_description"class="fs-15">
                             
@@ -250,7 +250,7 @@
                             
                           </h2>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                           <p id="news5_description"class="fs-15">
                             
@@ -272,7 +272,7 @@
                            
                           </h2>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                           <p id="news6_description"class="fs-15">
                             
@@ -294,7 +294,7 @@
                             
                           </h2>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                           <p id="news7_description"class="fs-15">
                             
@@ -315,7 +315,7 @@
                                   
                                 </h5>
                                 <p class="fs-13 text-muted mb-0">
-                                  <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                  <span class="mr-2">  </span> 
                                 </p>
                               </div>
                               <div class="col-sm-4">
@@ -340,7 +340,7 @@
                                   
                                 </h5>
                                 <p class="fs-13 text-muted mb-0">
-                                  <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                  <span class="mr-2">  </span> 
                                 </p>
                               </div>
                               <div class="col-sm-4">
@@ -365,7 +365,7 @@
                                   
                                 </h5>
                                 <p class="fs-13 text-muted mb-0">
-                                  <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                                  <span class="mr-2">  </span> 
                                 </p>
                               </div>
                               <div class="col-sm-4">
@@ -397,7 +397,7 @@
                             
                           </h3>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                         </div>
                         <div class="mb-4">
@@ -412,7 +412,7 @@
                             
                           </h3>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                         </div>
                         <div class="mb-4">
@@ -427,7 +427,7 @@
                             
                           </h3>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Fotoğraf </span>10 Dakika Önce
+                            <span class="mr-2">  </span> 
                           </p>
                         </div>
                       </div>
@@ -677,13 +677,13 @@ fetch(req)
 
    })
 
-   var tarih = new Date();
+      var tarih = new Date();
       var yil = tarih.getFullYear();
       var ay = tarih.getMonth() + 1;
       var gun = tarih.getDate();
       var saat = tarih.getHours();
       var dakika = tarih.getMinutes();
-      var tarih = gun + "/" + ay + "/" + yil + " " + saat + ":" + dakika ;
+      var tarih = gun + "." + ay + "." + yil + " " + saat + ":" + dakika ;
       document.getElementById("tarih").innerHTML = tarih;
 
     </script>

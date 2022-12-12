@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>World Time</title>
+    <title>Newsociety</title>
     <!-- plugin css for this page -->
     <link
       rel="stylesheet"
@@ -148,8 +148,8 @@
               </p>
             </div>
             <div class="d-flex">
-              <span class="mr-3 text-danger">Pazartesi, Kasım 14, 2022</span>
-              <span class="text-danger">9°C,Amasya</span>
+              <span id="tarih" class="mr-3 text-danger"></span>
+              <span class="text-danger"></span>
             </div>
           </div>
         </div>
@@ -349,5 +349,17 @@
     <script src="../assets/js/jquery.easeScroll.js"></script>
     <script src="../assets/js/jquery.easeScroll.js"></script>
     <!-- End custom js for this page-->
+    <script>
+          var tarih = new Date();
+          var yil = tarih.getFullYear();
+          var ay = tarih.getMonth() + 1;
+          var gun = tarih.getDate();
+          var saat = tarih.getHours();
+          var dakika = tarih.getMinutes();
+          var tarih = gun + "." + ay + "." + yil + " " + saat + ":" + dakika ;
+          document.getElementById("tarih").innerHTML = tarih;
+    </script>
+    
+
   </body>
 </html>
