@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="login-form">
-    <form action="/examples/actions/confirmation.php" method="post">	
+    <form action="login.php" method="post">	
 		<h2>Giriş Yap</h2>	
         <div class="text-center social-btn">
             <a href="#" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook"></i><b>Facebook</b> ile giriş yap</a>
@@ -33,7 +33,7 @@
             <input type="password" class="form-control input-lg" name="password" placeholder="Şifre" required="required">
         </div>        
         <div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block login-btn">Giriş Yap</button>
+            <button type="submit" action ="login.php" class="btn btn-success btn-lg btn-block login-btn">Giriş Yap</button>
         </div>
     </form>
     <div class="text-center"><span style="color:white">Hesabınız yok mu?</span> <a href="registration.html">Buradan kayıt olabilirsiniz</a></div>
