@@ -17,7 +17,10 @@
         if($stmt_result->num_rows>0){
             $data = $stmt_result->fetch_assoc();
             if($data['password']===$password){
-                echo "<script> alert(' giriş başarılı')</script>";
+                //echo "<script> alert(' giriş başarılı')</script>";
+                header("Location: ../index.html"); 
+                
+
             }
             else{
                 echo "<h2>kullanıcı adı veya şifre hatalı</h2>";
@@ -33,7 +36,7 @@
         
         
         
-        // header("Location: login.html"); die();
+        
         // echo "<script> alert(' Kayıt oluşturuldu')</script>";
 
     }
