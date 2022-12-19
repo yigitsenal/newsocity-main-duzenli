@@ -1,4 +1,5 @@
 <?php
+session_start();
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -18,6 +19,8 @@
             $data = $stmt_result->fetch_assoc();
             if($data['password']===$password){
                 //echo "<script> alert(' giriş başarılı')</script>";
+                $_SESSION["username"]=$username;
+
                 header("Location: ../index.html"); 
                 
 
