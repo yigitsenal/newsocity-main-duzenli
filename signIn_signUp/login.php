@@ -33,16 +33,9 @@
        
         //header("Location: registration.html"); die();
             
-        
-        
-        
-        
+   
         // echo "<script> alert(' Kayıt oluşturuldu')</script>";
 
     }
-    
 
-
-
-    
 ?>
