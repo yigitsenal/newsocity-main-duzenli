@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+	include("signIn_signUp/connection.php");
+	include("signIn_signUp/functions.php");
+
+	$user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -49,11 +59,13 @@
                   <li class="nav-item">
                     <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
                   </li>
-                  <li class="nav-item">
-                    <a href="signIn_signUp/login.html" class="nav-link">Oturum Aç</a>
+                  <li class="nav-item">                
+                    <a href="signIn_signUp/login.php" class="nav-link">Oturum Aç</a>                   
+                      <p class="nav-link">Merhaba <?php echo $user_data['user_name']; ?></p>
+                    <a href="signIn_signUp/logout.php" class="nav-link">Çıkış Yap</a>
                   </li>
                   <li class="nav-item">
-                    <a href="signIn_signUp/registration.html" class="nav-link">Kaydol</a>
+                    <a href="signIn_signUp/signup.php" class="nav-link">Kaydol</a>
                   </li>
                 </ul>
               </div>
@@ -76,7 +88,7 @@
                         </button>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link" href="index.html">ANA SAYFA</a>
+                        <a class="nav-link" href="index.php">ANA SAYFA</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="pages/health.html">SAĞLIK</a>
@@ -153,12 +165,12 @@
                   <div class="badge badge-danger fs-12 font-weight-bold mb-3">
                     Güncel Haberler
                   </div>
-                  <h1 id="news2_title" style="color:#007bff; font-size:24px;"class="mb-0"></h1>
+                  <h1 id="news2_title" style="color:white; font-size:24px;"class="mb-0"></h1>
                   <h1 class="mb-2">
                     
                   </h1>
                   <div class="fs-12">
-                    <span style="color:#007bff; font-size:16px;"id="news2_publish"class="mr-2"> </span>
+                    <span style="color:white; font-size:16px;"id="news2_publish"class="mr-2"> </span>
                   </div>
                 </div>
               </div>

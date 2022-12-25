@@ -1,3 +1,35 @@
+<?php 
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$user_name = $_POST['user_name'];
+		$password = $_POST['password'];
+        $mail = $_POST['mail'];
+
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name) && !empty($mail))
+		{
+
+			//save to database
+			$user_id = random_num(20);
+			$query = "insert into users (user_id,user_name,password,mail) values ('$user_id','$user_name','$password','$mail')";
+
+			mysqli_query($con, $query);
+
+			header("Location: login.php");
+			die;
+		}else
+		{
+			echo "Please enter some valid information!";
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +50,7 @@
 </head>
 <body>
 <div class="signup-form">
-    <form action="connect.php" method="post">
+    <form  method="post">
 		<h2>Hesap Oluştur</h2>
 		<p class="hint-text">Sosyal medya hesabınız veya e-posta adresinizle kaydolun</p>
 		<div class="social-btn text-center">
@@ -28,10 +60,10 @@
 		</div>
 		<div class="or-seperator"><b>veya</b></div>
         <div class="form-group">
-        	<input type="text" class="form-control input-lg" name="username" placeholder="Kullanıcı Adı" required="required">
+        	<input type="text" class="form-control input-lg" name="user_name" placeholder="Kullanıcı Adı" required="required">
         </div>
 		<div class="form-group">
-        	<input type="email" class="form-control input-lg" name="email" placeholder="Mail Adresi" required="required">
+        	<input type="email" class="form-control input-lg" name="mail" placeholder="Mail Adresi" required="required">
         </div>
 		<div class="form-group">
             <input type="password" class="form-control input-lg" name="password" placeholder="Şifre" required="required">
@@ -40,10 +72,10 @@
             <input type="password" class="form-control input-lg" name="confirm_password" placeholder="Şifreyi Onayla" required="required">
         </div>  
         <div class="form-group">
-            <button type="submit" action="connect.php" class="btn btn-success btn-lg btn-block signup-btn" >Kayıt Ol</button>
+            <button type="submit" value="signup" class="btn btn-success btn-lg btn-block signup-btn" >Kayıt Ol</button>
         </div>
     </form>
-    <div class="text-center" style="color:white">Zaten bir hesabınız var mı? <a href="login.html" class="nav-link">Buradan giriş yapabilirsiniz</a></div>
+    <div class="text-center" style="color:white">Zaten bir hesabınız var mı? <a href="login.php" class="nav-link">Buradan giriş yapabilirsiniz</a></div>
 </div>
 </body>
 <script>
