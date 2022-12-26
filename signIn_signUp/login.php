@@ -89,7 +89,7 @@ session_start();
             <button type="submit" value="login"name="login" class="btn btn-success btn-lg btn-block login-btn">Giriş Yap</button>
         </div>
     </form>
-    <div class="text-center"><span style="color:white">Hesabınız yok mu?</span> <a href="registration.html">Buradan kayıt olabilirsiniz</a></div>
+    <div class="text-center"><span style="color:white">Hesabınız yok mu?</span> <a href="signup.php">Buradan kayıt olabilirsiniz</a></div>
 </div>
 </body>
 </html>
