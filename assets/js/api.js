@@ -1,6 +1,6 @@
 
 
-var url = 'https://newsapi.org/v2/top-headlines?country=tr&apiKey=538580b6dd0f4ddcb9a2f195a94ebf3b'
+var url = 'https://newsapi.org/v2/top-headlines?country=tr&apiKey='
 
     var req = new Request(url);
     var news = document.getElementById('news')
